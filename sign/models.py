@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-#发布会表
+#发布会前端页面
 
 
 class Event(models.Model):
@@ -26,8 +26,8 @@ class Guest(models.Model):
     sign = models.BooleanField()
     create_time = models.DateTimeField(auto_now=True)
 
-    class Meta:
-        unique_together = ("event", "phone")
+    class Meta:#内部类，用来定义Guest模型的一些行为特性
+        unique_together = ("event", "phone")#unique_together用于设置两个字段为联合主键
 
     def __str__(self):
         return self.realname

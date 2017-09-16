@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'sign',
+    'sign',#将sign添加到项目中
+    'bootstrap3'#添加django-bootstrap3应用
 ]
 
 MIDDLEWARE = [
@@ -80,7 +81,7 @@ DATABASES = {
         'HOST': '127.0.0.1',
         'PORT': '3306',
         # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        'NAME': 'djangolearn',
+        'NAME': 'DjangoLearn',
         'USER': 'root',
         'PASSWORD': '123456',
         'OPTIONS': {

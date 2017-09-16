@@ -3,6 +3,7 @@ from sign.models import Event, Guest
 
 
 # Register your models here.
+#这个是后台管理员的页面
 
 
 class Eventadmin(admin.ModelAdmin):
@@ -13,8 +14,9 @@ class Eventadmin(admin.ModelAdmin):
 
 class GuestAdmin(admin.ModelAdmin):
     list_display = ['realname', 'phone', 'email', 'sign', 'create_time', 'event']
-    search_fields = ['realname', 'phone']
-    list_filter = ['sign']
+    search_fields = ['realname', 'phone']#搜索栏
+    list_filter = ['sign']#过滤器
 
-admin.site.register(Event, Eventadmin)
-admin.site.register(Guest, GuestAdmin)
+
+admin.site.register(Event, Eventadmin)#将Eventadmin模块注册在Event下
+admin.site.register(Guest, GuestAdmin)#将GuestAdmin模块注册在Guest下
